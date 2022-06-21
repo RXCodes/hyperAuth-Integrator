@@ -17,3 +17,7 @@ Press `Import Plugin` and select the plugin file to install the plugin. If you a
 ![548F1B4D-68A1-479C-8B13-275244E838FA](https://user-images.githubusercontent.com/61912060/174913721-09a3a4f3-8a19-4eef-bbc4-e3389f39e816.jpeg)
 
 After installing / updating the plugin, navigate back to the main menu and **Download** your modified project.
+![5A8728FC-262C-4C29-AFC4-78AC96E66324](https://user-images.githubusercontent.com/61912060/174914180-a148577e-cd2a-442b-b9c3-c5fedf94c006.jpeg)
+
+After the project has been compiled, you can download your project and open it in hyperPad. The newly modified project will contain the plugin.
+![E0B75579-9710-4414-BB65-D36E0F645E5A](https://user-images.githubusercontent.com/61912060/174914248-4191bcbe-44c7-4f0d-a4f7-c4e67870a6ab.jpeg)
