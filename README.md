@@ -8,7 +8,7 @@ Currently, all the plugin offers right now are **Hype Tokens** - a `virtual curr
 After installing the plugin file linked above, navigate to the [hyperPad Project Modder](https://rxcodes.github.io/hyperPad-Project-Modder/) to set up the plugin.
 
 Import your hyperPad project file by pressing this button.
-![FC78FAA5-23A9-4389-B93E-9C7463C4CB2F](https://user-images.githubusercontent.com/61912060/174913532-319196d5-3593-49c3-9062-d340f2e5e294.jpeg)
+<img src="https://user-images.githubusercontent.com/61912060/174913532-319196d5-3593-49c3-9062-d340f2e5e294.jpeg" width=50>
 
 After importing the project, navigate to `Manage Plugins`.
 ![3AA8D365-0013-48F4-85FD-BB4294F33242](https://user-images.githubusercontent.com/61912060/174913712-b417e2aa-de5f-458f-ab44-d1ae8bbbf1a0.jpeg)
