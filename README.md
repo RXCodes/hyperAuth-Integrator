@@ -5,7 +5,9 @@ Download the plugin [here](https://raw.githubusercontent.com/RXCodes/hyperAuth-I
 Currently, all the plugin offers right now are **Hype Tokens** - a `virtual currency` used by the hyperPad discord server. Hype Tokens can be used to purchase in-game goods within a project under a Discord account.
 
 # Setting Up the Plugin
-<img src="https://user-images.githubusercontent.com/61912060/174914248-4191bcbe-44c7-4f0d-a4f7-c4e67870a6ab.jpeg" style="width: 50%">
+![B6FE93B3-DB23-4155-8C23-0E58288F2294](https://user-images.githubusercontent.com/61912060/174915536-432f9976-8987-4762-bf3c-35efb5186a12.jpeg)
+
+
 **1.** After installing the plugin file linked above, navigate to the [hyperPad Project Modder](https://rxcodes.github.io/hyperPad-Project-Modder/) to set up the plugin.
 **2.** Import your hyperPad project file by pressing the **Import File** button. It is worth noting that the hyperPad Project Modder will only accept `.tap` files.<br>
 **3.** After importing the project, navigate to `Manage Plugins`. This is where all your plugins will be displayed. If you have not imported a plugin in your project before, the plugins list should be blank.
