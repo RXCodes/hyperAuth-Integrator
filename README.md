@@ -7,7 +7,7 @@ Currently, all the plugin offers right now are **Hype Tokens** - a `virtual curr
 # Setting Up the Plugin
 After installing the plugin file linked above, navigate to the [hyperPad Project Modder](https://rxcodes.github.io/hyperPad-Project-Modder/) to set up the plugin.
 
-Import your hyperPad project file by pressing this button. It is worth noting that the hyperPad Project Modder will only accept `.tap` files.<br>
+Import your hyperPad project file by pressing the **Import File** button. It is worth noting that the hyperPad Project Modder will only accept `.tap` files.<br>
 <img src="https://user-images.githubusercontent.com/61912060/174913532-319196d5-3593-49c3-9062-d340f2e5e294.jpeg" style="width: 50%">
 
 After importing the project, navigate to `Manage Plugins`. This is where all your plugins will be displayed. If you have not imported a plugin in your project before, the plugins list should be blank. *(As shown in the next screenshot)*<br>
