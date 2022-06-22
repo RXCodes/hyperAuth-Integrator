@@ -67,7 +67,7 @@ When the transaction is complete or when the popup is closed, you will need to k
 ![B4BDE710-4799-4914-B9C6-0B1509C26BE2](https://user-images.githubusercontent.com/61912060/174923168-e2a61dde-de3d-4460-ac7e-d1f97b760cb7.jpeg)
 
 Receive Event: `hypeToken Resolve` <br>
-*Triggers when the purchase request popup is closed.*<br><br>
+*Triggers when the purchase request popup is closed.*<br>
 
 Expected Values: `"String"`
   - `Success`: The user has successfully purchased the product. This outputs regardless of product type.
@@ -78,3 +78,29 @@ Expected Values: `"String"`
   - `Expired Token`: The API failed to fetch the user's discord account due to an expired token - the user must log in again.
   - `Internal Error`: The API failed to fetch data due to an internal error.
   - `Input Error`: *(v3)*: The API encountered an error due to invalid inputs.
+ 
+## Restore Purchases (v3)
+You can send a request to restore purchases which will fetch IDs of `Non-Consumable` products and checks if the user has purchased the product(s) already.
+![0FA8F57F-65F1-438C-8C2A-90E62E6C3B22](https://user-images.githubusercontent.com/61912060/174925563-422ac9a2-dd3d-4223-96ac-59bb7480781c.jpeg)
+
+Broadcast Event: `hypeToken Restore`<br>
+*Fetches the provided product IDs and returns whether the products were purchased or not.*
+
+Broadcast Value: `[Array]`
+  - Each value will be a `product ID`.
+  - Example: `["yADJspz1CrfJg3QO", "FwwrpH7JI0eU5eJ1", "e2GqMUQSk1ATWSub"]`
+  - Example: `["6xFv5Rozj7UiC0U2"]`
+
+Recieve Event: `hypeToken Restore Result` <br>
+*Triggers when hyperAuth has finished fetching product IDs*
+
+Expected Values: `{dictionary}"`
+  - `success`: Returns 1 if the request was successfully fulfilled. Returns 0 otherwise.
+  - `error`: The error from the request, if any. Returns blank if none.
+  - `purchased`: An array of IDs that the user has purchased on their account. This will only include values provided in the `hypeToken Restore` broadcast value.
+
+## Managing Achievements (v4)
+You can set up achievements for the player to complete.
+
+## Setting Leaderboards (v5)
+You can create leaderboards that store players' scores and display them.
