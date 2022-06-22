@@ -56,7 +56,7 @@ Broadcast value: `{dictionary}`
   **Version 3** (unreleased)
   - `subscriptionType`: The type of subscription to offer the user.
     - **"Weekly"**: The user will be charged on a weekly basis. *(Every 7 days)*
-    - **Bi-Weekly**: The user will be charged once every 2 weeks. *(Every 14 days)*
+    - **"Bi-Weekly"**: The user will be charged once every 2 weeks. *(Every 14 days)*
     - **"Monthly"**: The user will be charged on a monthly basis. *(Every 30 days)*
   - `limitedOfferEnds`: The *UNIX timestamp* of when the limited time offer ends. If set, a countdown will be displayed on the popup. This property is required for `Limited Time` product type.
   - `broadcast`: An additional broadcast event to send the output of the transaction to.
