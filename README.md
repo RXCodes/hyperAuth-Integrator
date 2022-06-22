@@ -94,10 +94,11 @@ Broadcast Value: `[Array]`
 Recieve Event: `hypeToken Restore Result` <br>
 *Triggers when hyperAuth has finished fetching product IDs*
 
-Expected Values: `{dictionary}"`
+Expected Values: `{dictionary}`
   - `success`: Returns 1 if the request was successfully fulfilled. Returns 0 otherwise.
   - `error`: The error from the request, if any. Returns blank if none.
-  - `purchased`: An array of IDs that the user has purchased on their account. This will only include values provided in the `hypeToken Restore` broadcast value.
+  - `purchasedArray`: An array of IDs that the user has purchased on their account. This will only include values provided in the `hypeToken Restore` broadcast value.
+  - `purchasedDictionary`: A dictionary where the key is the product ID and the value is either 0 or 1. The value is 1 if the user has previously purchased the corresponding ID.
 
 ## Managing Achievements (v4)
 You can set up achievements for the player to complete.
