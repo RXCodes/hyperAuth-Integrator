@@ -1,6 +1,7 @@
 # Brief Introduction
 This plugin integrate features of the hyperPad discord server into hyperPad projects - creating an ecosystem that promotes collaboration, innovation and fun!
 Download the plugin [here](https://raw.githubusercontent.com/RXCodes/hyperAuth-Integrator/main/hypeToken%20Integrator.plugin).
+The version of the plugin is **v2**.
 
 Currently, all the plugin offers right now are **Hype Tokens** - a `virtual currency` used by the hyperPad discord server. Hype Tokens can be used to purchase in-game goods within a project under a Discord account.
 
@@ -38,7 +39,20 @@ Broadcast value: `{dictionary}`
   - `type`: *(required)* The type of product being sold. Must be one of the strings defined below.
     - **"Consumable"** - The product can be purchased multiple times.
     - **"Non-Consumable"** - The product can only be purchased once. The user will not be charged for repeat purchases.
-    - **"Subscription"** *(UNRELEASED)* - The user must purchases a subscription that is only valid for a limited amount of time. The user has a choice to automatically renew the subscription and can cancel it anytime.
+    - **"Subscription"** *(v3)* - The user must purchases a subscription that is only valid for a limited amount of time. The user has a choice to automatically renew the subscription and can cancel it anytime.
+    - **"Limited Time"** *(v3)* - The product is only available for a limited amount of time.
   - `seller`: *(required)* The discord tag of a user in the hyperPad discord server who is selling the product.
   - `icon`: *(required)* The path to your graphic asset you want to use for the icon of the purchase. 
-  - `id`: The identifier of the product. The ID should be a *unique 16-character-long string* of random characters. The same ID will reference the same product, so make sure this doesn't change for your product at all. This property is only required for `Non-Consumable` product type.
+  - `id`: The identifier of the product. The ID should be a *unique 16-character-long string* of random characters. The same ID will reference the same product, so make sure this doesn't change for your product at all. This property is only required for `Non-Consumable` and `Subscription` product type.
+  **Version 2**
+  - `description`: The description of the product. This will show up next to the icon in the popup.
+  - `discount`: The integer percentage of the original cost to decrease the price by. *(Range: 10-90)* This also triggers a visual event to show the original price vs the discounted price to inform the user of the discount.
+  **Version 3** (unreleased)
+  - `subscriptionType`: The type of subscription to offer the user.
+    - **"Weekly"**: The user will be charged on a weekly basis. *(Every 7 days)*
+    - **Bi-Weekly**: The user will be charged once every 2 weeks. *(Every 14 days)*
+    - **"Monthly"**: The user will be charged on a monthly basis. *(Every 30 days)*
+  - `limitedOfferEnds`: The *UNIX timestamp* of when the limited time offer ends. If set, a countdown will be displayed on the popup. This property is required for `Limited Time` product type.
+
+## Handling Purchase Results
+When the transaction is complete and 
