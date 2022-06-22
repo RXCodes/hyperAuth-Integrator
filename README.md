@@ -31,6 +31,10 @@ You will also need to know `Dictionaries` - they serve the purpose of storing da
 When requesting a purchase, an uneditable popup will ask the user to buy an item from the seller. The user has the option to cancel *or* pay the price seen on the popup using their discord account.
 ![BC8423ED-8AC2-4019-8C6E-0732BA12ADCB](https://user-images.githubusercontent.com/61912060/174916859-d5f8ce7c-731c-42d1-becd-e851b3e05e0e.jpeg)
 
-Broadcast event: `hypeToken Purchase`<br>
+Broadcast event: `hypeToken Purchase`<br><br>
 Broadcast value: `{dictionary}`
-  - `"name"`: The name of the item being sold.
+  - `name`: *(required)* The name of the product being sold.
+  - `cost`: *(required)* The amount of hype tokens the product should sell for.
+  - `type`: *(required)* The type of product being sold. Valid entries are:
+    - "Consumable" - The product can be purchased multiple times.
+  - `id`: The identifier of the product. The ID should be a *unique 16-character-long string* of random characters. The same ID will reference the same product, so make sure this doesn't change for your product at all. This property is only required for `Non-Consumable` product type.
