@@ -21,11 +21,12 @@ Currently, all the plugin offers right now are **Hype Tokens** - a `virtual curr
 - 6. After the project has been compiled, you can download your project and open it in hyperPad. The newly modified project will contain the plugin. You are free to delete the original project, but it is safer to have copies of your project before and after modding a project as the hyperPad Project Modder is in `beta` - hyperPad can corrupt your entire project.<br>
 
 # Using the Plugin API
+You'll know the plugin is installed when you can see the `hypeTokens Manager` icon in the **Assets** menu - it is placed in the main directory *outside all folders*. You are free to rename and move this asset somewhere else, but deleting it will cause the plugin to malfunction as of `version 2.0 and above`.
+
 The plugin will use the `Broadcast Message` and `Receive Message` behaviors to interact with the plugin. If you are unfamiliar with how those behaviors work, please refer to the [Broadcast Message documentation](https://hyperpad.zendesk.com/hc/en-us/articles/360016293712) and the [Receive Message documentation](https://hyperpad.zendesk.com/hc/en-us/articles/360016294052-Receive-Message). These behaviors send and receive data across objects, so it is very useful in this plugin.
 
 You will also need to know `Dictionaries` - they serve the purpose of storing data in an intuitive manner. If you are unfamilar with how dictionaries work or how to use them, you can either watch the [hyperPad 101 Tutorial video](https://youtu.be/ln5JYzhAE9I) or read [hyperPad's documentation](https://hyperpad.zendesk.com/hc/en-us/articles/360016300172-Dictionary).
 
-## Requesting a Purchase
-When requesting a purchase, an uneditable popup will ask the user to buy an item from the seller.
-![2D80E4E9-B59A-449E-9A3A-EA034033E12D](https://user-images.githubusercontent.com/61912060/174916527-f8e05954-d39a-4928-9e52-38e23f3ce420.jpeg)
-
+## Requesting a Purchase (Introduced in v1)
+When requesting a purchase, an uneditable popup will ask the user to buy an item from the seller. The user has the option to cancel *or* pay the price seen on the popup using their discord account.
+![BC8423ED-8AC2-4019-8C6E-0732BA12ADCB](https://user-images.githubusercontent.com/61912060/174916859-d5f8ce7c-731c-42d1-becd-e851b3e05e0e.jpeg)
