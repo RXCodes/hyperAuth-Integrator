@@ -30,3 +30,7 @@ You will also need to know `Dictionaries` - they serve the purpose of storing da
 ## Requesting a Purchase (Introduced in v1)
 When requesting a purchase, an uneditable popup will ask the user to buy an item from the seller. The user has the option to cancel *or* pay the price seen on the popup using their discord account.
 ![BC8423ED-8AC2-4019-8C6E-0732BA12ADCB](https://user-images.githubusercontent.com/61912060/174916859-d5f8ce7c-731c-42d1-becd-e851b3e05e0e.jpeg)
+
+Broadcast event: `hypeToken Purchase`
+Broadcast value: `{dictionary}`
+  - `"name"`: The name of the item being sold.
