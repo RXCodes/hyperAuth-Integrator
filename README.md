@@ -32,7 +32,9 @@ You will also need to know `Dictionaries` - they serve the purpose of storing da
 When requesting a purchase, an uneditable popup will ask the user to buy an item from the seller. The user has the option to cancel *or* pay the price seen on the popup using their discord account.
 ![BC8423ED-8AC2-4019-8C6E-0732BA12ADCB](https://user-images.githubusercontent.com/61912060/174916859-d5f8ce7c-731c-42d1-becd-e851b3e05e0e.jpeg)
 
-Broadcast event: `hypeToken Purchase`<br><br>
+Broadcast event: `hypeToken Purchase`<br>
+*Requests the plugin to launch a purchase prompt. Throws an error when provided with invalid inputs.*
+
 Broadcast value: `{dictionary}`
   - `name`: *(required)* The name of the product being sold.
   - `cost`: *(required)* The amount of hype tokens the product should sell for.
@@ -57,6 +59,22 @@ Broadcast value: `{dictionary}`
     - **Bi-Weekly**: The user will be charged once every 2 weeks. *(Every 14 days)*
     - **"Monthly"**: The user will be charged on a monthly basis. *(Every 30 days)*
   - `limitedOfferEnds`: The *UNIX timestamp* of when the limited time offer ends. If set, a countdown will be displayed on the popup. This property is required for `Limited Time` product type.
+  - `broadcast`: An additional broadcast event to send the output of the transaction to.
+  - `broadcastSuccess`: An additional broadcast event to send the output of the transaction to if the transaction was successful.
 
 ## Handling Purchase Results
-When the transaction is complete and 
+When the transaction is complete or when the popup is closed, you will need to know the status of the purchase. You will use a **Receive Message** behavior directly under the **Broadcast Message** behavior that is executing the popup. The Receive Message will trigger once the popup has closed, outputting the status of the transaction.
+![B4BDE710-4799-4914-B9C6-0B1509C26BE2](https://user-images.githubusercontent.com/61912060/174923168-e2a61dde-de3d-4460-ac7e-d1f97b760cb7.jpeg)
+
+Receive Event: `hypeToken Resolve` <br>
+*Triggers when the purchase request popup is closed.*<br><br>
+
+Expected Values: `"String"`
+  - `Success`: The user has successfully purchased the product. This outputs regardless of product type.
+  - `Payment Cancelled`: The user decided to not purchase the product.
+  - `Seller Not Found`: The provided discord tag for the `seller` property could not be found in the hyperPad discord server.
+  - `Connection Error`: The API was unable to connect to the servers due to no connection.
+  - `Runtime Connection Error`: The API disconnected during the transaction process.
+  - `Expired Token`: The API failed to fetch the user's discord account due to an expired token - the user must log in again.
+  - `Internal Error`: The API failed to fetch data due to an internal error.
+  - `Input Error`: *(v3)*: The API encountered an error due to invalid inputs.
