@@ -38,4 +38,6 @@ Broadcast value: `{dictionary}`
   - `type`: *(required)* The type of product being sold. Must be one of the strings defined below.
     - "Consumable" - The product can be purchased multiple times.
     - "Non-Consumable" - The product can only be purchased once. The user will not be charged for repeat purchases.
+    - "Subscription" *(UNRELEASED)* - The user must purchases a subscription that is only valid for a limited amount of time. The user has a choice to automatically renew the subscription and can cancel it anytime.
+  - `seller`: *(required)* The discord tag of a user in the hyperPad discord server who is selling the product.
   - `id`: The identifier of the product. The ID should be a *unique 16-character-long string* of random characters. The same ID will reference the same product, so make sure this doesn't change for your product at all. This property is only required for `Non-Consumable` product type.
