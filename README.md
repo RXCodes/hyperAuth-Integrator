@@ -19,3 +19,8 @@ Currently, all the plugin offers right now are **Hype Tokens** - a `virtual curr
 - 5. It might take *some time* for your plugin to install - you can expect the loading animation to freeze for large plugin files. After installing / updating the plugin, navigate back to the main menu and **Download** your modified project. Compiling a project can take some time, so hang on tight!
 
 - 6. After the project has been compiled, you can download your project and open it in hyperPad. The newly modified project will contain the plugin. You are free to delete the original project, but it is safer to have copies of your project before and after modding a project as the hyperPad Project Modder is in `beta` - hyperPad can corrupt your entire project.<br>
+
+# Using the Plugin API
+The plugin will use the `Broadcast Message` and `Receive Message` behaviors to interact with the plugin. If you are unfamiliar with how those plugins work, please refer to the [Broadcast Message documentation](https://hyperpad.zendesk.com/hc/en-us/articles/360016293712) and the [Receive Message documentation](https://hyperpad.zendesk.com/hc/en-us/articles/360016294052-Receive-Message). These behaviors send and receive data across objects, so it is very useful in this plugin.
+
+## Requesting a Purchase
