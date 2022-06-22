@@ -44,9 +44,13 @@ Broadcast value: `{dictionary}`
   - `seller`: *(required)* The discord tag of a user in the hyperPad discord server who is selling the product.
   - `icon`: *(required)* The path to your graphic asset you want to use for the icon of the purchase. 
   - `id`: The identifier of the product. The ID should be a *unique 16-character-long string* of random characters. The same ID will reference the same product, so make sure this doesn't change for your product at all. This property is only required for `Non-Consumable` and `Subscription` product type.
+
+
   **Version 2**
   - `description`: The description of the product. This will show up next to the icon in the popup.
   - `discount`: The integer percentage of the original cost to decrease the price by. *(Range: 10-90)* This also triggers a visual event to show the original price vs the discounted price to inform the user of the discount.
+
+
   **Version 3** (unreleased)
   - `subscriptionType`: The type of subscription to offer the user.
     - **"Weekly"**: The user will be charged on a weekly basis. *(Every 7 days)*
