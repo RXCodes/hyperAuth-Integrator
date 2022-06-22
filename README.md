@@ -27,7 +27,7 @@ The plugin will use the `Broadcast Message` and `Receive Message` behaviors to i
 
 You will also need to know `Dictionaries` - they serve the purpose of storing data in an intuitive manner. If you are unfamilar with how dictionaries work or how to use them, you can either watch the [hyperPad 101 Tutorial video](https://youtu.be/ln5JYzhAE9I) or read [hyperPad's documentation](https://hyperpad.zendesk.com/hc/en-us/articles/360016300172-Dictionary).
 
-## Requesting a Purchase (Introduced in v1)
+## Requesting a Purchase
 When requesting a purchase, an uneditable popup will ask the user to buy an item from the seller. The user has the option to cancel *or* pay the price seen on the popup using their discord account.
 ![BC8423ED-8AC2-4019-8C6E-0732BA12ADCB](https://user-images.githubusercontent.com/61912060/174916859-d5f8ce7c-731c-42d1-becd-e851b3e05e0e.jpeg)
 
@@ -36,8 +36,9 @@ Broadcast value: `{dictionary}`
   - `name`: *(required)* The name of the product being sold.
   - `cost`: *(required)* The amount of hype tokens the product should sell for.
   - `type`: *(required)* The type of product being sold. Must be one of the strings defined below.
-    - "Consumable" - The product can be purchased multiple times.
-    - "Non-Consumable" - The product can only be purchased once. The user will not be charged for repeat purchases.
-    - "Subscription" *(UNRELEASED)* - The user must purchases a subscription that is only valid for a limited amount of time. The user has a choice to automatically renew the subscription and can cancel it anytime.
+    - **"Consumable"** - The product can be purchased multiple times.
+    - **"Non-Consumable"** - The product can only be purchased once. The user will not be charged for repeat purchases.
+    - **"Subscription"** *(UNRELEASED)* - The user must purchases a subscription that is only valid for a limited amount of time. The user has a choice to automatically renew the subscription and can cancel it anytime.
   - `seller`: *(required)* The discord tag of a user in the hyperPad discord server who is selling the product.
+  - `icon`: *(required)* The path to your graphic asset you want to use for the icon of the purchase. 
   - `id`: The identifier of the product. The ID should be a *unique 16-character-long string* of random characters. The same ID will reference the same product, so make sure this doesn't change for your product at all. This property is only required for `Non-Consumable` product type.
