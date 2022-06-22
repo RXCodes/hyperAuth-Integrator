@@ -35,6 +35,7 @@ Broadcast event: `hypeToken Purchase`<br><br>
 Broadcast value: `{dictionary}`
   - `name`: *(required)* The name of the product being sold.
   - `cost`: *(required)* The amount of hype tokens the product should sell for.
-  - `type`: *(required)* The type of product being sold. Valid entries are:
+  - `type`: *(required)* The type of product being sold. Must be one of the strings defined below.
     - "Consumable" - The product can be purchased multiple times.
+    - "Non-Consumable" - The product can only be purchased once. The user will not be charged for repeat purchases.
   - `id`: The identifier of the product. The ID should be a *unique 16-character-long string* of random characters. The same ID will reference the same product, so make sure this doesn't change for your product at all. This property is only required for `Non-Consumable` product type.
