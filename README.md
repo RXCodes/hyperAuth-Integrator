@@ -35,7 +35,7 @@ When requesting a purchase, an uneditable popup will ask the user to buy an item
 Broadcast event: `hypeToken Purchase`<br>
 *Requests the plugin to launch a purchase prompt. Throws an error when provided with invalid inputs.*
 
-Broadcast value: `{dictionary}`
+Broadcast value: `{Dictionary}`
   - `name`: *(required)* The name of the product being sold.
   - `cost`: *(required)* The amount of hype tokens the product should sell for.
   - `type`: *(required)* The type of product being sold. Must be one of the strings defined below.
@@ -94,7 +94,7 @@ Broadcast Value: `[Array]`
 Recieve Event: `hypeToken Restore Result` <br>
 *Triggers when hyperAuth has finished fetching product IDs*
 
-Expected Values: `{dictionary}`
+Expected Values: `{Dictionary}`
   - `success`: Returns 1 if the request was successfully fulfilled. Returns 0 otherwise.
   - `error`: The error from the request, if any. Returns blank if none.
   - `purchasedArray`: An array of IDs that the user has purchased on their account. This will only include values provided in the `hypeToken Restore` broadcast value.
