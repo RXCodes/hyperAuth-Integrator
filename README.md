@@ -1,6 +1,6 @@
 # Brief Introduction
 This plugin integrate features of the hyperPad discord server into hyperPad projects - creating an ecosystem that promotes collaboration, innovation and fun!
-Download the plugin [here](https://raw.githubusercontent.com/RXCodes/hyperAuth-Integrator/main/hypeTokens%20Manager%20v2.plugin).
+Download the plugin [here](https://www.mediafire.com/file/vv27i8oxlvs12bg/hypeToken_Integrator_v2.plugin/file).
 The version of the plugin is **v2**.
 
 Currently, all the plugin offers right now are **Hype Tokens** - a `virtual currency` used by the hyperPad discord server. Hype Tokens can be used to purchase in-game goods within a project under a Discord account.
